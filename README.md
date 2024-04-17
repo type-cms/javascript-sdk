@@ -4,7 +4,7 @@
 
 `npm install --save @typecms-sdk/javascript-sdk`
 
-## Quick start
+## Quick start guide
 
 ```
 import TypeCMS from '@typecms-sdk/javascript-sdk'
