@@ -1,4 +1,4 @@
-name: Semantic Release
+name: Release
 on:
   push:
     branches:
@@ -9,50 +9,28 @@ permissions:
 
 jobs:
   release:
-    name: Semantic Release
+    name: Release
     runs-on: ubuntu-latest
     permissions:
       contents: write # to be able to publish a GitHub release
       issues: write # to be able to comment on released issues
       pull-requests: write # to be able to comment on released pull requests
-      id-token: write # to enable use of OIDC for npm provenance ()
+      id-token: write # to enable use of OIDC for npm provenance
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          persist-credentials: true # this allows later steps to push changes
-
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "lts/*"
-
       - name: Install dependencies
         run: npm clean-install
-
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
-
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
-
-      - name: Update version in package.json
-        run: |
-          VERSION=$(npx -q semantic-release --dry-run | grep 'The next release version is' | awk '{print $NF}')
-          if [ ! -z "$VERSION" ]; then
-            npm version $VERSION --no-git-tag-version
-            git config --global user.email "you@example.com"
-            git config --global user.name "Your Name"
-            git add package.json
-            git commit -m "chore: bump version" || echo "No changes to commit"
-            git push
-          else
-            echo "No version change detected"
-          fi
-
-      - name: Publish to npm
-        run: npm publish --access public
