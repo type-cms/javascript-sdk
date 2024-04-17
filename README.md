@@ -26,4 +26,4 @@ const content = await typecms.getEntries({
 
 ```
 
-# version bump
+# additional version bump
