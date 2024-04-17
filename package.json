@@ -14,7 +14,16 @@
       {
         "name": "main"
       }
-    ]
+    ],
+    "npmPublish": true,
+    "tarballDir": "dist",
+    "pkgRoot": ".",
+    "npm": {
+      "npmPublish": true,
+      "tarballDir": "dist",
+      "pkgRoot": ".",
+      "access": "public"
+    }
   },
   "devDependencies": {
     "semantic-release": "^23.0.8"
