@@ -1,6 +1,6 @@
 name: Semantic Release
 on:
-  pull_request:
+  push:
     branches:
       - main
 
@@ -52,3 +52,8 @@ jobs:
           else
             echo "No version change detected"
           fi
+
+      - name: Publish to npm
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
