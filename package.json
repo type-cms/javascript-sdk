@@ -1,7 +1,7 @@
 {
   "name": "@typecms-sdk/javascript-sdk",
   "version": "1.0.0",
-  "description": "",
+  "description": "The javascript SDK for Type CMS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
