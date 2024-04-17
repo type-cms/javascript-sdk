@@ -1,13 +1,14 @@
 {
   "name": "@typecms-sdk/javascript-sdk",
   "version": "1.0.9",
-  "description": "The javascript SDK for Type CMS",
+  "description": "Type CMS SDK for JavaScript",
   "main": "index.js",
   "scripts": {
     "semantic-release": "semantic-release"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Type CMS Inc.",
+  "license": "MIT",
+  "homepage": "https://www.typecms.com/",
   "release": {
     "branches": [
       "main",
