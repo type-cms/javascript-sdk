@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/type-cms/javascript-sdk/compare/v1.0.9...v1.0.10) (2024-04-17)
+
+
+### Bug Fixes
+
+* update package.json ([4091f73](https://github.com/type-cms/javascript-sdk/commit/4091f730585dd3c2a07ee2fee0f5aac49c3eb1c6))
+
 ## [1.0.9](https://github.com/type-cms/javascript-sdk/compare/v1.0.8...v1.0.9) (2024-04-17)
 
 
