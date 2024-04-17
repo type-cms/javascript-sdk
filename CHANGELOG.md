@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/type-cms/javascript-sdk/compare/v1.0.6...v1.0.7) (2024-04-17)
+
+
+### Bug Fixes
+
+* update .npmrc ([e25ac9e](https://github.com/type-cms/javascript-sdk/commit/e25ac9e9bb342a58235bc2bab876a721d6964e72))
+
 ## [1.0.6](https://github.com/type-cms/javascript-sdk/compare/v1.0.5...v1.0.6) (2024-04-17)
 
 
