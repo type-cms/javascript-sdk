@@ -41,9 +41,14 @@ jobs:
 
       - name: Update version in package.json
         run: |
-          npm version $(npx -q semantic-release --dry-run | grep 'The next release version is' | awk '{print $NF}') --no-git-tag-version
-          git config --global user.email "support@typecms.com"
-          git config --global user.name "Type CMS"
-          git add package.json
-          git commit -m "chore: bump version"
-          git push
+          VERSION=$(npx -q semantic-release --dry-run | grep 'The next release version is' | awk '{print $NF}')
+          if [ ! -z "$VERSION" ]; then
+            npm version $VERSION --no-git-tag-version
+            git config --global user.email "you@example.com"
+            git config --global user.name "Your Name"
+            git add package.json
+            git commit -m "chore: bump version" || echo "No changes to commit"
+            git push
+          else
+            echo "No version change detected"
+          fi
