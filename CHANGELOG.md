@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/type-cms/javascript-sdk/compare/v1.0.7...v1.0.8) (2024-04-17)
+
+
+### Bug Fixes
+
+* added npmignore ([9e8b30e](https://github.com/type-cms/javascript-sdk/commit/9e8b30ecc743214edbdfec1c4e043c1cf2babcd9))
+
 ## [1.0.7](https://github.com/type-cms/javascript-sdk/compare/v1.0.6...v1.0.7) (2024-04-17)
 
 
