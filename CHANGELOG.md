@@ -1,3 +1,10 @@
+## [1.0.12](https://github.com/type-cms/javascript-sdk/compare/v1.0.11...v1.0.12) (2024-04-18)
+
+
+### Bug Fixes
+
+* added querystring support ([1b72dfb](https://github.com/type-cms/javascript-sdk/commit/1b72dfbe8af247084a589aa054a76fc02ceb851d))
+
 ## [1.0.11](https://github.com/type-cms/javascript-sdk/compare/v1.0.10...v1.0.11) (2024-04-18)
 
 
