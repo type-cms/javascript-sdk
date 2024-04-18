@@ -1,11 +1,28 @@
+// Define an interface for the constructor parameters
+interface TypeCMSConfig {
+  baseUrl: string;
+  token: string;
+  projectId: string;
+}
+
+// Define an interface for the body parameter
+interface EntryQuery {
+  [key: string]: any;
+}
+
 class TypeCMS {
-  constructor(obj) {
+  private baseUrl: string;
+  private token: string;
+  private projectId: string;
+
+  constructor(obj: TypeCMSConfig) {
     this.baseUrl = obj.baseUrl;
     this.token = obj.token;
     this.projectId = obj.projectId;
   }
 
-  async getEntries(body) {
+  // Method to fetch entries, properly typed with return type
+  async getEntries(body: EntryQuery): Promise<any> {
     try {
       const response = await fetch(
         `${this.baseUrl}/api/projects/${this.projectId}/content`,
@@ -24,6 +41,8 @@ class TypeCMS {
       return data;
     } catch (error) {
       // Handle error
+      console.error('Failed to fetch entries:', error);
+      throw error; // Rethrow or handle accordingly
     }
   }
 }
