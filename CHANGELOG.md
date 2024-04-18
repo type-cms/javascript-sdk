@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/type-cms/javascript-sdk/compare/v1.0.13...v1.1.0) (2024-04-18)
+
+
+### Features
+
+* added query support ([eb9cceb](https://github.com/type-cms/javascript-sdk/commit/eb9cceb758e0aa91a9e6c6d5ae0bdef58d984a06))
+
 ## [1.0.13](https://github.com/type-cms/javascript-sdk/compare/v1.0.12...v1.0.13) (2024-04-18)
 
 
