@@ -6,7 +6,8 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "semantic-release": "semantic-release",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "build": "tsc"
   },
   "author": "Type CMS Inc.",
   "license": "MIT",
