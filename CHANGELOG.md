@@ -1,3 +1,10 @@
+## [1.0.13](https://github.com/type-cms/javascript-sdk/compare/v1.0.12...v1.0.13) (2024-04-18)
+
+
+### Bug Fixes
+
+* build lib ([185b9ab](https://github.com/type-cms/javascript-sdk/commit/185b9ab15509aa7f79a2ebd39b4c0463dbe5cfbc))
+
 ## [1.0.12](https://github.com/type-cms/javascript-sdk/compare/v1.0.11...v1.0.12) (2024-04-18)
 
 
