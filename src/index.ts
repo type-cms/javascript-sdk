@@ -11,7 +11,7 @@ interface EntryQuery {
 }
 
 interface EntryOptions {
-  format?: ['json', 'html'];
+  format?: 'json' | 'html'
 }
 
 class TypeCMS {

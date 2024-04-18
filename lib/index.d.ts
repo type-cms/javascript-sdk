@@ -7,7 +7,7 @@ interface EntryQuery {
     [key: string]: any;
 }
 interface EntryOptions {
-    format?: ['json', 'html'];
+    format?: 'json' | 'html';
 }
 declare class TypeCMS {
     private baseUrl;
