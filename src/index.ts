@@ -10,6 +10,10 @@ interface EntryQuery {
   [key: string]: any;
 }
 
+interface EntryOptions {
+  format?: ['json', 'html'];
+}
+
 class TypeCMS {
   private baseUrl: string;
   private token: string;
@@ -22,10 +26,13 @@ class TypeCMS {
   }
 
   // Method to fetch entries, properly typed with return type
-  async getEntries(body: EntryQuery): Promise<any> {
+  async getEntries(body: EntryQuery, options: EntryOptions = {}): Promise<any> {
+
+    const query = toQueryString(options);
+
     try {
       const response = await fetch(
-        `${this.baseUrl}/api/projects/${this.projectId}/content`,
+        `${this.baseUrl}/api/projects/${this.projectId}/content${query}`,
         {
           method: "POST",
           headers: {
@@ -48,3 +55,12 @@ class TypeCMS {
 }
 
 export default TypeCMS;
+
+
+function toQueryString(params: EntryOptions) {
+  const query = Object.keys(params)
+    // @ts-ignore
+    .map((key: string) => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
+    .join('&');
+  return query ? `?${query}` : '';
+}
